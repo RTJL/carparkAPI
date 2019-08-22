@@ -21,4 +21,20 @@ public class Location {
     public Double getLng() {
         return this.lng;
     }
+
+    @Override
+    public boolean equals(Object object) {
+        if (object == this) {
+            return true;
+        }
+
+        if (object == null || object.getClass() != this.getClass()) {
+            return false;
+        }
+
+        Location location = (Location) object;
+        return address == location.address
+            && lat == location.getLat()
+            && lng == location.getLng();
+    }
 }

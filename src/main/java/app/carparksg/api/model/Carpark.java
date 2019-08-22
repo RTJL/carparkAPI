@@ -27,4 +27,20 @@ public class Carpark {
         this.freeLots = freeLots;
     }
 
+    @Override
+    public boolean equals(Object object) {
+        if (object == this) {
+            return true;
+        }
+
+        if (object == null || object.getClass() != this.getClass()) {
+            return false;
+        }
+
+        Carpark carpark = (Carpark) object;
+        return id == carpark.getId()
+            && location == carpark.getLocation()
+            && freeLots == carpark.getFreeLots();
+    }
+
 }

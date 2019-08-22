@@ -1,3 +1,8 @@
+coverage:
+  range: 50..70
+  round: down
+  precision: 2
+
 ignore:
   - "src/main/java/app/carparksg/api/model/LtaCarpark.java"
   - "src/main/java/app/carparksg/api/model/LtaAvailability.java"

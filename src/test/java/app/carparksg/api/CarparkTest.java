@@ -1,6 +1,8 @@
 package app.carparksg.api;
 
 import static org.junit.Assert.assertEquals;
+import static org.junit.Assert.assertFalse;
+import static org.junit.Assert.assertTrue;
 
 import org.junit.Before;
 import org.junit.Test;
@@ -51,7 +53,20 @@ public class CarparkTest {
     }
 
     @Test
-    public void testEquals() {
-        assertEquals(carpark, carpark);
+    public void testEqualsSameObject() {
+        assertTrue(carpark.equals(carpark));
     }
+
+    @Test
+    public void testEqualsDifferentObject() {
+        Carpark newCarpark = new Carpark(this.id, this.location, this.freeLots);
+        assertTrue(carpark.equals(newCarpark));
+    }
+
+    @Test
+    public void testEqualsNull() {
+        assertFalse(carpark.equals(null));
+    }
+
+
 }

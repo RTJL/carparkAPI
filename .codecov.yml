@@ -6,6 +6,9 @@ coverage:
     project:
       default:
         target: 50%
+    patch:
+      default:
+        target: 50%
 
 ignore:
   - "src/main/java/app/carparksg/api/model/LtaCarpark.java"

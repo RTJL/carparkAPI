@@ -1,5 +1,6 @@
 package app.carparksg.api.controller;
 
+import org.springframework.web.bind.annotation.CrossOrigin;
 import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
@@ -17,6 +18,7 @@ import app.carparksg.api.model.CarparkDAO;
 import app.carparksg.api.ErrorResponse;
 
 @RestController
+@CrossOrigin(origins = "*")
 public class CarparkController {
 
     private CarparkDAO carparkDAO;

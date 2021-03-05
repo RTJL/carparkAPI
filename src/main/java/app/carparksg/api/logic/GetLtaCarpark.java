@@ -26,7 +26,7 @@ public class GetLtaCarpark {
     public GetLtaCarpark() {
         HttpHeaders httpHeaders = new HttpHeaders();
         httpHeaders.setAccept(Arrays.asList(MediaType.APPLICATION_JSON));
-        httpHeaders.set("AccountKey", "fH3CTYBLyA7GhpvRrBtRag==");
+        httpHeaders.set("AccountKey", "_replace_api_key_here_==");
         builder = UriComponentsBuilder.fromHttpUrl(url)
             .queryParam("$skip", 0);
         httpEntity = new HttpEntity<String>("parameters", httpHeaders);
